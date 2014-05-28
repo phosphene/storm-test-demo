@@ -9,3 +9,13 @@ pom.xml.asc
 .lein-repl-history
 .lein-plugins/
 .lein-failures
+target/**
+.lein**
+.repl/
+out/
+target
+lib
+classes
+*~
+*#*
+\#*
