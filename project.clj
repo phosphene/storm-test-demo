@@ -12,6 +12,7 @@
                  ]
   :main ^:skip-aot storm-test-demo.core
   :target-path "target/%s"
+  :test-paths ["test/" "spec/"]
   :profiles {
              :dev
              {:dependencies [
