@@ -22,9 +22,9 @@
                              [org.mockito/mockito-all "1.9.0"]
                              [org.jmock/jmock "2.6.0"]
                              [midje "1.6.0" :exclusions [org.clojure/clojure joda-time]]
-               
                              [speclj "2.5.0"]
                              [lein-midje "3.1.3"]]}
-                             
-             :uberjar {:aot :all}})
+             
+             :uberjar {:aot :all}}
+  :plugins [[speclj "2.5.0"]])
 
