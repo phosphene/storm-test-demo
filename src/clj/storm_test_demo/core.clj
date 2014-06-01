@@ -60,24 +60,3 @@
     "4" (bolt-spec {"3" ["word"]}
                    word-count
                    :p 6)}))
-
-(defn run-local! []
-  (let [cluster (LocalCluster.)]
-    (.submitTopology cluster "word-count" {TOPOLOGY-DEBUG true} (mk-topology))
-    (Thread/sleep 10000)
-    (.shutdown cluster)
-    ))
-
-(defn submit-topology! [name]
-  (StormSubmitter/submitTopology
-   name
-   {TOPOLOGY-DEBUG true
-    TOPOLOGY-WORKERS 3}
-   (mk-topology)))
-
-(defn -main
-  ([]
-   (run-local!))
-  ([name]
-   (submit-topology! name)))
-
